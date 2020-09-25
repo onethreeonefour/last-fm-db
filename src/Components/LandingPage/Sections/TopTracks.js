@@ -5,14 +5,13 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
 import { API_KEY, API_URL } from '../../../Config';
 
 const useStyles = makeStyles({
     root: {
         maxWidth: 345,
         backgroundColor: "#444444",
-
+        boxShadow: "0 4px 6px 0 hsla(0, 0%, 0%, 0.2)"
     },
     media: {
         height: 400,
@@ -32,7 +31,6 @@ function TopTracks(props) {
                 response.topalbums.album.forEach(index => {
                     let trackName = props.track.name.toLocaleLowerCase();
                     if (index.name.toLocaleLowerCase() === trackName) {
-                       
                         setImage(index.image[3]["#text"])
                     }
                 })
@@ -51,18 +49,18 @@ function TopTracks(props) {
                     title="Single - Art"
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
+                    <h2 className="bold">
                         {props.track.artist.name}
-                    </Typography>
-                    <Typography variant="body2" component="p">
+                    </h2>
+                    <p className="lighter">
                         {props.track.name}
-                    </Typography>
+                    </p>
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Typography variant="body2" component="p" style={{ paddingLeft: "0.5rem" }}>
+                <p style={{ paddingLeft: "0.5rem" }} className="lighter paragraph">
                     Playcount &#x2022; {props.track.playcount}
-                </Typography>
+                </p>
             </CardActions>
         </Card>
     );

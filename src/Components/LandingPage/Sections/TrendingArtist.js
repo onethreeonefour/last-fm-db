@@ -14,6 +14,7 @@ const useStyles = makeStyles({
     root: {
         maxWidth: 345,
         backgroundColor: "#444444",
+        boxShadow: "0 4px 6px 0 hsla(0, 0%, 0%, 0.2)"
 
     },
     media: {
@@ -25,7 +26,7 @@ const randomNum = Math.floor((Math.random() * 10));
 
 
 function TrendingArtist(props) {
-    
+
     const [Image, setImage] = useState("")
 
     useEffect(() => {
@@ -49,12 +50,12 @@ function TrendingArtist(props) {
                     title="Artist"
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
+                    <h2 className="bold">
                         {props.artist.name}
-                    </Typography>
-                    <Typography variant="body2" component="p">
+                    </h2>
+                    <p className="lighter">
                         Playcount &#x2022; {props.artist.playcount}
-                    </Typography>
+                    </p>
                 </CardContent>
             </CardActionArea>
             <CardActions>

@@ -1,16 +1,23 @@
-
 @font-face {
   font-family: neon;
   src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
 }
 
 h1, h2, h3, h4, p {
-  color: whitesmoke
+  color: whitesmoke;
+  font-family: 'Raleway', sans-serif;
 }
 
+h2{
+  font-size: 1.75rem;
+}
+
+.paragraph{
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -60,18 +67,23 @@ code {
   -webkit-animation: flux 2s linear infinite;
   -o-animation: flux 2s linear infinite;
 }
-.background-white{
+
+.background-white {
   background-color: whitesmoke;
 }
 
 .background {
   background-color: #1F1F1F;
-  margin:auto;
-
+  margin: auto;
 }
 
-.bold{
+.bold {
   font-weight: bold;
+}
+
+.lighter {
+  font-weight: lighter;
+  color: rgb(228, 228, 228)
 }
 
 .container {
@@ -82,15 +94,14 @@ code {
   margin: auto;
 }
 
-.row-four{
+.row-four {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
   align-items: center;
   margin: auto;
-  gap:1.5rem
+  gap: 1.5rem
 }
-
 
 @keyframes neon {
   0%, 100% {
@@ -114,21 +125,20 @@ code {
   }
 }
 
-
 @media only screen and (max-width: 1100px) {
-  .row-four{
-    grid-template-columns: repeat(3,1fr);
+  .row-four {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media only screen and (max-width: 750px) {
-  .row-four{
-    grid-template-columns: repeat(2,1fr);
+  .row-four {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .row-four{
-    grid-template-columns: repeat(1,1fr);
+  .row-four {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
