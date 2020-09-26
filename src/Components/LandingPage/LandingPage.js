@@ -35,7 +35,7 @@ function LandingPage() {
 
     return (
         <div>
-            <SplashHeader />
+            <SplashHeader />     
             {/*Top Tracks*/}
             <div className="container">
                 <h1>Top Tracks</h1>

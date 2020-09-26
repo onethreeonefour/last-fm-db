@@ -6,7 +6,6 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
 import { API_KEY, API_URL } from '../../../Config';
 
 
@@ -33,7 +32,6 @@ function TrendingArtist(props) {
         fetch(`${API_URL}artist.gettopalbums&artist=${props.artist.name}&api_key=${API_KEY}&format=json&limit=10`)
             .then(response => response.json())
             .then(response => {
-                console.log(response)
                 setImage(response.topalbums.album[randomNum].image[3]["#text"])
             })
 
@@ -50,12 +48,8 @@ function TrendingArtist(props) {
                     title="Artist"
                 />
                 <CardContent>
-                    <h2 className="bold">
-                        {props.artist.name}
-                    </h2>
-                    <p className="lighter">
-                        Playcount &#x2022; {props.artist.playcount}
-                    </p>
+                    <h2 className="bold">{props.artist.name}</h2>
+                    <h3 className="lighter">Playcount &#x2022; {props.artist.playcount}</h3>
                 </CardContent>
             </CardActionArea>
             <CardActions>

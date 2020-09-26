@@ -16,9 +16,9 @@ const useStyles = makeStyles({
     media: {
         height: 400,
     },
+
 });
 
-const randomNum = Math.floor(Math.random() * 5);
 
 function TopTracks(props) {
     const [Image, setImage] = useState("")
@@ -49,18 +49,12 @@ function TopTracks(props) {
                     title="Single - Art"
                 />
                 <CardContent>
-                    <h2 className="bold">
-                        {props.track.artist.name}
-                    </h2>
-                    <p className="lighter">
-                        {props.track.name}
-                    </p>
+                    <h2 className="bold">{props.track.artist.name}</h2>
+                    <h3 className="lighter">{props.track.name}</h3>
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <p style={{ paddingLeft: "0.5rem" }} className="lighter paragraph">
-                    Playcount &#x2022; {props.track.playcount}
-                </p>
+                <p style={{ paddingLeft: "0.5rem" }} className="lighter paragraph">Playcount &#x2022; {props.track.playcount}</p>
             </CardActions>
         </Card>
     );
