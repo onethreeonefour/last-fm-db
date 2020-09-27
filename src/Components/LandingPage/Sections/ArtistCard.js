@@ -29,11 +29,11 @@ function ArtistCard(props) {
 
     useEffect(() => {
         if (props.id.length > 0) {
-          
+
             fetch(`https://webservice.fanart.tv/v3/music/${props.id}?api_key=${FAN_ART_API}`)
                 .then(response => response.json())
                 .then(response => {
-       
+
                     if (response.hasOwnProperty('artistbackground')) {
                         setImage(response.artistbackground[0].url);
                     }
@@ -71,6 +71,7 @@ function ArtistCard(props) {
                         />
                         <CardContent>
                             <h2 className="bold">{props.artist.name}</h2>
+                            <h3 className="lighter">Playcount  &#x2022; {props.artist.playcount}</h3>
                         </CardContent>
                     </CardActionArea>
                     <CardActions>
@@ -79,10 +80,7 @@ function ArtistCard(props) {
                          </Button>
                     </CardActions>
                 </Card>
-
-
             }
-
         </div >
     )
 }
