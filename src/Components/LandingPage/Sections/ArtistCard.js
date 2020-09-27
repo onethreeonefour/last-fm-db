@@ -41,7 +41,6 @@ function ArtistCard(props) {
         }
     }, [props.id])
 
-
     return (
         <div>
             {Image.length > 0 ?
@@ -54,7 +53,7 @@ function ArtistCard(props) {
                         />
                         <CardContent>
                             <h2 className="bold">{props.artist.name}</h2>
-
+                            <h3 className="lighter">Playcount  &#x2022; {props.artist.playcount}</h3>
                         </CardContent>
                     </CardActionArea>
                     <CardActions>
