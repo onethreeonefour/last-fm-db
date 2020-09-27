@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import SplashHeader from './Sections/SplashHeader'
 import TrendingArtist from './Sections/TrendingArtist'
 import TopTracks from './Sections/TopTracks'
-import { API_KEY, API_URL } from '../../Config'
+import { API_KEY, API_URL, } from '../../Config'
 
 function LandingPage() {
 
@@ -12,7 +12,7 @@ function LandingPage() {
     useEffect(() => {
         const trendingArtist = `${API_URL}chart.gettopartists&api_key=${API_KEY}&format=json&limit=12`;
         const topTracks = `${API_URL}chart.gettoptracks&api_key=${API_KEY}&format=json&limit=8`;
-        fetchTopArtist(trendingArtist)
+        fetchTopArtist(trendingArtist);
         fetchTopTracks(topTracks);
     }, [])
 
@@ -20,6 +20,7 @@ function LandingPage() {
         fetch(path)
             .then(response => response.json())
             .then(response => {
+                //console.log(response)
                 setArtist(response.artists)
             })
     }
@@ -31,7 +32,6 @@ function LandingPage() {
                 setTrack(response.tracks)
             })
     }
-
 
     return (
         <div>

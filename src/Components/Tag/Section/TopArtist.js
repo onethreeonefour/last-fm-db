@@ -16,7 +16,7 @@ function TopArtist(props) {
     }, [])
 
 
-    console.log(Image)
+    console.log(props)
     return (
         <div>
             {Image ? 
