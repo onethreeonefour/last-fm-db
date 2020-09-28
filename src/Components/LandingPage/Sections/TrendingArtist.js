@@ -17,6 +17,7 @@ function TrendingArtist(props) {
             .then(response => {
                 setImage(response.topalbums.album[randomNum].image[3]["#text"])
             })
+
         fetch(`${BRAINZ_URL}${props.artist.name}&fmt=json`)
             .then(response => response.json())
             .then(response => {
@@ -24,14 +25,16 @@ function TrendingArtist(props) {
                 setBrainzID(response.artists[0].id)
             })
     }, [])
-
+    
     return (
         <div>
-            <ArtistCard 
-                id={BrainzID}
-                artist={props.artist}
-                image={Image}
-            />
+            <a href={`/artist/${props.artist.name}`}>
+                <ArtistCard
+                    id={BrainzID}
+                    artist={props.artist}
+                    image={Image}
+                />
+            </a>
         </div>
 
     );

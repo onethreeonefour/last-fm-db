@@ -38,25 +38,27 @@ function TopTracks(props) {
 
     }, [props])
     const classes = useStyles();
-
+    //console.log(props.track.artist.name)
 
     return (
-        <Card className={classes.root}>
-            <CardActionArea>
-                <CardMedia
-                    className={classes.media}
-                    image={Image ? Image : props.track.image[2]["#text"]}
-                    title="Single - Art"
-                />
-                <CardContent>
-                    <h2 className="bold">{props.track.artist.name}</h2>
-                    <h3 className="lighter">{props.track.name}</h3>
-                </CardContent>
-            </CardActionArea>
-            <CardActions>
-                <p style={{ paddingLeft: "0.5rem" }} className="lighter paragraph">Playcount &#x2022; {props.track.playcount}</p>
-            </CardActions>
-        </Card>
+        <a href={`/artist/${props.track.artist.name}`}>
+            <Card className={classes.root}>
+                <CardActionArea>
+                    <CardMedia
+                        className={classes.media}
+                        image={Image ? Image : props.track.image[2]["#text"]}
+                        title="Single - Art"
+                    />
+                    <CardContent>
+                        <h2 className="bold">{props.track.artist.name}</h2>
+                        <h3 className="lighter">{props.track.name}</h3>
+                    </CardContent>
+                </CardActionArea>
+                <CardActions>
+                    <p style={{ paddingLeft: "0.5rem" }} className="lighter paragraph">Playcount &#x2022; {props.track.playcount}</p>
+                </CardActions>
+            </Card>
+        </a>
     );
 }
 

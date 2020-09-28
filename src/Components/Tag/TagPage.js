@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import TopArtist from './Section/TopArtist'
+import TopArtist from './Section/TopArtist';
+import SimilarTags from './Section/SimilarTags'
 
 import { API_KEY, API_URL } from '../../Config';
 
@@ -23,31 +24,36 @@ function TagPage(props) {
         fetch(`${API_URL}tag.gettopartists&tag=${props.match.params.tagId}&api_key=${API_KEY}&format=json&limit=6`)
             .then(response => response.json())
             .then(response => {
-                //console.log(response.topartists.artist)
                 setArtist(response.topartists.artist)
             })
     }, [])
 
-    console.log(Artist)
 
     return (
-        <div className="container" style={{ width: '85%', paddingTop:"3rem" }}>
+        <div className="container" style={{ width: '85%', paddingTop: "3rem" }}>
             {Content ?
-                <div className="row-two" style={{gap:'1rem'}}>
+                <div className="row-two" style={{ gap: '1rem' }}>
                     <div>
                         <h1>Summary</h1>
                         <p>{Content}</p>
+                        <SimilarTags
+                            artist={Artist}
+                        />
                     </div>
-                    <div className="row-three">
-                        {Artist && Artist.map((artist, index) => (
-                            <TopArtist
-                                key={index}
-                                artist={artist}
-                            />
-                        ))
-                        }
+                    <div>
+                        <h3 style={{ textAlign: 'center' }}>Most Popular</h3>
+                        <div className="row-three">
+                            {Artist && Artist.map((artist, index) => (
+                                <TopArtist
+                                    key={index}
+                                    artist={artist}
+                                />
+                            ))
+                            }
+                        </div>
                     </div>
                 </div> : <div><h1>Loading</h1></div>}
+
         </div>
     )
 }

@@ -4,6 +4,7 @@ import NavBar from './Components/NavBar/NavBar';
 import LandingPage from './Components/LandingPage/LandingPage';
 import TagPage from './Components/Tag/TagPage';
 import Footer from './Components/Footer/Footer';
+import ArtistPage from './Components/Artist/ArtistPage'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/tag/:tagId" component={TagPage} />
+          <Route exact path="/artist/:artistName" component={ArtistPage} />
         </Switch>
       </div>
       <Footer />

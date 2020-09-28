@@ -33,9 +33,10 @@ function ArtistCard(props) {
             fetch(`https://webservice.fanart.tv/v3/music/${props.id}?api_key=${FAN_ART_API}`)
                 .then(response => response.json())
                 .then(response => {
-
                     if (response.hasOwnProperty('artistbackground')) {
-                        setImage(response.artistbackground[0].url);
+                        let tempStr = response.artistbackground[0].url;
+                        let newStr = tempStr.substring((15));
+                        setImage("https://"+newStr);
                     }
                 })
         }
