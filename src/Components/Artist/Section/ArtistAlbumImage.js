@@ -6,7 +6,6 @@ import AlbumCarousel from './AlbumCarousel'
 function ArtistAlbumImage(props) {
 
     const [Image, setImage] = useState([])
-
     useEffect(() => {
         fetch(`${API_URL}artist.gettopalbums&artist=${props.artist.artist.name}&api_key=${API_KEY}&format=json&limit=20`)
             .then(response => response.json())
@@ -22,6 +21,7 @@ function ArtistAlbumImage(props) {
             <h1>Top Rated Albums</h1>
             <AlbumCarousel
                 albumImage={Image}
+                name={props.artist.artist.name}
             />
         </div>
     )

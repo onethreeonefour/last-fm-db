@@ -3,6 +3,7 @@ import React from 'react'
 import Chip from '@material-ui/core/Chip';
 import { makeStyles } from '@material-ui/core/styles';
 
+
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'inline-flex',
@@ -14,13 +15,13 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-function ArtistTag(props) {
+function AlbumTag(props) {
     const classes = useStyles();
     return (
         <div className={classes.root}>
-            {props.tag ? <Chip label={props.tag.name} component="a" href={`/tag/${props.tag.name}`} clickable></Chip> : <h1><p>loading..</p></h1>}
+            {props.tag ? <Chip label={props.tag.name} component="a" href={`/tag/${props.tag.name}`} clickable></Chip> : <h1><Chip label="Loading"></Chip></h1>}
         </div>
     )
 }
 
-export default ArtistTag
+export default AlbumTag

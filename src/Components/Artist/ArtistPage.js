@@ -24,22 +24,21 @@ function ArtistPage(props) {
                 setArtistBio(newArr)
             })
     }, [])
-    //console.log(ArtistInfo)
+    console.log(ArtistInfo)
 
     return (
         <div>
             {ArtistInfo ?
                 <div>
-                    <div className="row-two" style={{ padding: "1.6rem" }}>
+                    <div className="row-two" style={{ marginTop: "2.5rem", padding: "1rem", backgroundColor: "#363732" }}>
                         <div>
                             <ArtistImageContainer
                                 mbid={ArtistInfo.artist.mbid}
                                 name={ArtistInfo.artist.name}
                             />
-
                         </div>
-                        <div>
-                            <h1>{ArtistInfo.artist.name}</h1>
+                        <div style={{ overflow: "hidden" }}>
+                            <a href={`/artist/${ArtistInfo.artist.name}`}><h1>{ArtistInfo.artist.name}</h1></a>
                             <p>{ArtistBio}</p>
                             <h4>Listeners - <span>{ArtistInfo.artist.stats.listeners}</span></h4>
                             <h4>Playcount - <span>{ArtistInfo.artist.stats.playcount}</span></h4>
@@ -47,7 +46,12 @@ function ArtistPage(props) {
                             {ArtistInfo && ArtistInfo.artist.tags.tag.map((tag, index) => (
                                 <ArtistTag
                                     tag={tag}
+                                    key={index}
                                 />
+                            ))}
+                            <h4>Similar Artists</h4>
+                            {ArtistInfo && ArtistInfo.artist.similar.artist.map((artist, index) => (
+                                <a href={`/artist/${artist.name}`} key={index} >{artist.name} </a>
                             ))}
                         </div>
                     </div>

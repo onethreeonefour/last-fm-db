@@ -4,7 +4,6 @@ import 'react-multi-carousel/lib/styles.css';
 
 
 function AlbumCarousel(props) {
-
     const responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
@@ -26,11 +25,12 @@ function AlbumCarousel(props) {
     };
     const renderCards = props.albumImage.map((album, index) => {
         //console.log(album)
-        return <a href={`/artist/${album.name}`} key={index}>
+        return <a href={`/artist/${props.name}/album/${album.name}`} key={index}>
             <img src={album.image[3]['#text']} alt='album' className="album-carousel-image"></img>
             <h4>{album.name}</h4>
         </a>
     })
+
 
     return (
         <div >

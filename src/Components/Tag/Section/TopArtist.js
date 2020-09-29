@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {BRAINZ_URL } from '../../../Config';
+import { BRAINZ_URL } from '../../../Config';
 import TopArtistImage from './TopArtistImage'
 
 function TopArtist(props) {
@@ -10,7 +10,7 @@ function TopArtist(props) {
         fetch(`${BRAINZ_URL}${props.artist.name}&fmt=json`)
             .then(response => response.json())
             .then(response => {
-                if(response.count>0){
+                if (response.count > 0) {
                     setBrainzID(response.artists[0].id)
                 }
             })

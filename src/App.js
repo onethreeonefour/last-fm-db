@@ -5,6 +5,7 @@ import LandingPage from './Components/LandingPage/LandingPage';
 import TagPage from './Components/Tag/TagPage';
 import Footer from './Components/Footer/Footer';
 import ArtistPage from './Components/Artist/ArtistPage'
+import AlbumPage from './Components/Album/AlbumPage'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/tag/:tagId" component={TagPage} />
           <Route exact path="/artist/:artistName" component={ArtistPage} />
+          <Route exact path="/artist/:artistName/album/:albumName" component={AlbumPage} />
         </Switch>
       </div>
       <Footer />

@@ -8,7 +8,7 @@ a {
   color: whitesmoke;
 }
 
-h1, h2, h3, h4, p {
+h1, h2, h3, h4, p, a {
   color: whitesmoke;
   font-family: 'Raleway', sans-serif;
 }
@@ -97,6 +97,7 @@ code {
   justify-content: center;
   margin: auto;
 }
+
 .center-text {
   justify-content: center;
   align-items: center;
@@ -115,8 +116,8 @@ code {
 }
 
 .tag-container {
-  width:85%;
-  margin:auto;
+  width: 85%;
+  margin: auto;
   padding: 3rem 0 3rem 0;
   font-family: 'Playfair Display', serif;
   font-size: 1.75rem;
@@ -259,23 +260,31 @@ code {
   gap: 1.5rem
 }
 
-.artist-image-bio{
-  height:auto;
-  width:750px;
+.artist-image-bio {
+  height: auto;
+  width: 750px;
   background-position: center;
   background-size: cover;
   border-radius: 0.5rem;
 }
 
-.blank-artist-image{
-  height:auto;
-  width:400px;
+.blank-artist-image {
+  height: auto;
+  width: 400px;
 }
 
-.album-carousel-image{
+.album-carousel-image {
   border-radius: 0.25rem;
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
 }
+
+.album-image-grid {
+  height: 450px;
+  width: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+}
+
 
 @keyframes neon {
   0%, 100% {
@@ -338,11 +347,20 @@ code {
   .row-four {
     grid-template-columns: repeat(2, 1fr);
   }
+  .artist-image-bio {
+    width: 500px;
+  }
+  .album-image-grid {
+    height: 400px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
   .row-four {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .artist-image-bio {
+    width: 450px;
   }
 }
 
@@ -360,5 +378,11 @@ code {
   }
   .row-three {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .artist-image-bio {
+    width: 330px;
+  }
+  .album-image-grid {
+    height: 300px;
   }
 }
