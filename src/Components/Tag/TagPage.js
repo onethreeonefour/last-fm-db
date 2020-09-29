@@ -27,6 +27,7 @@ function TagPage(props) {
                 setArtist(response.topartists.artist)
             })
     }, [])
+    console.log(Artist)
 
 
     return (
@@ -34,20 +35,23 @@ function TagPage(props) {
             {Content ?
                 <div className="row-two" style={{ gap: '1rem' }}>
                     <div>
-                        <h1>Summary</h1>
+                        <h1>{props.match.params.tagId}</h1>
+                        <h4>Summary</h4>
                         <p>{Content}</p>
                         <SimilarTags
                             artist={Artist}
                         />
                     </div>
                     <div>
-                        <h3 style={{ textAlign: 'center' }}>Most Popular</h3>
+                        <h2 style={{ textAlign: 'center' }}>Most Popular</h2>
                         <div className="row-three">
                             {Artist && Artist.map((artist, index) => (
-                                <TopArtist
-                                    key={index}
-                                    artist={artist}
-                                />
+                                <a href={`/artist/${artist.name}`}>
+                                    <TopArtist
+                                        key={index}
+                                        artist={artist}
+                                    />
+                                </a>
                             ))
                             }
                         </div>

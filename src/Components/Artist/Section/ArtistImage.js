@@ -1,27 +1,33 @@
 import React, { useEffect, useState } from 'react';
-import { API_KEY, API_URL } from '../../../Config';
-import AlbumCarousel from './AlbumCarousel'
-
+import { FAN_ART_API } from '../../../Config';
+import Blank from '../../../Images/blank-profile.png'
 
 function ArtistImage(props) {
-
-    const [Image, setImage] = useState([])
+    const [Image, setImage] = useState("")
 
     useEffect(() => {
-        fetch(`${API_URL}artist.gettopalbums&artist=${props.artist.artist.name}&api_key=${API_KEY}&format=json&limit=20`)
-            .then(response => response.json())
-            .then(response => {
-                //console.log(response)
-                setImage(response.topalbums.album)
-            })
+        if (props.id) {
+            fetch(`https://webservice.fanart.tv/v3/music/${props.id}?api_key=${FAN_ART_API}`)
+                .then(response => response.json())
+                .then(response => {
+                    if (response.hasOwnProperty('artistbackground')) {
+                        let tempStr = response.artistbackground[0].url;
+                        let newStr = tempStr.substring((15));
+                        setImage("https://" + newStr);
+                    }
+                })
 
-    }, [])
+
+        }
+    }, [props.id])
 
     return (
         <div>
-            <AlbumCarousel
-                albumImage={Image}
-            />
+            {Image ? <img src={Image} className="artist-image-bio" alt="artist-image"></img> :
+            
+            <img src={Blank} className="blank-artist-image" alt="blank-artist-image"></img>
+            
+            }
         </div>
     )
 }

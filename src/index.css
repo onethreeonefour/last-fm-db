@@ -259,6 +259,24 @@ code {
   gap: 1.5rem
 }
 
+.artist-image-bio{
+  height:auto;
+  width:750px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 0.5rem;
+}
+
+.blank-artist-image{
+  height:auto;
+  width:400px;
+}
+
+.album-carousel-image{
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+}
+
 @keyframes neon {
   0%, 100% {
     text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;

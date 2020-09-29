@@ -25,15 +25,15 @@ function AlbumCarousel(props) {
         }
     };
     const renderCards = props.albumImage.map((album, index) => {
-        console.log(album)
+        //console.log(album)
         return <a href={`/artist/${album.name}`} key={index}>
-            <img src={album.image[3]['#text']} alt='album'></img>
-            <h3>{album.name}</h3>
+            <img src={album.image[3]['#text']} alt='album' className="album-carousel-image"></img>
+            <h4>{album.name}</h4>
         </a>
     })
 
     return (
-        <div style={{ width: '85%', margin: "auto" }}>
+        <div >
             <Carousel
                 responsive={responsive}
                 centerMode={true}

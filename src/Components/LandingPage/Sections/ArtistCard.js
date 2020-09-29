@@ -7,6 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import { FAN_ART_API } from '../../../Config'
+import Blank from '../../../Images/blank-profile.png'
 
 
 const useStyles = makeStyles({
@@ -33,8 +34,8 @@ function ArtistCard(props) {
             fetch(`https://webservice.fanart.tv/v3/music/${props.id}?api_key=${FAN_ART_API}`)
                 .then(response => response.json())
                 .then(response => {
-                    if (response.hasOwnProperty('artistbackground')) {
-                        let tempStr = response.artistbackground[0].url;
+                    if (response.hasOwnProperty('artistthumb')) {
+                        let tempStr = response.artistthumb[0].url;
                         let newStr = tempStr.substring((15));
                         setImage("https://"+newStr);
                     }
@@ -57,17 +58,13 @@ function ArtistCard(props) {
                             <h3 className="lighter">Playcount  &#x2022; {props.artist.playcount}</h3>
                         </CardContent>
                     </CardActionArea>
-                    <CardActions>
-                        <Button size="small" variant="outlined" style={{ backgroundColor: "#0A0A0A", color: "whitesmoke" }}>
-                            Get Similar
-                        </Button>
-                    </CardActions>
+
                 </Card> :
                 <Card className={classes.root}>
                     <CardActionArea>
                         <CardMedia
                             className={classes.media}
-                            image={props.image}
+                            image={Blank}
                             title="Artist"
                         />
                         <CardContent>
@@ -75,11 +72,6 @@ function ArtistCard(props) {
                             <h3 className="lighter">Playcount  &#x2022; {props.artist.playcount}</h3>
                         </CardContent>
                     </CardActionArea>
-                    <CardActions>
-                        <Button size="small" variant="outlined" style={{ backgroundColor: "#0A0A0A", color: "whitesmoke" }}>
-                            Get Similar
-                         </Button>
-                    </CardActions>
                 </Card>
             }
         </div >

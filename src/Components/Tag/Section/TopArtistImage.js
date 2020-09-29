@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { FAN_ART_API } from '../../../Config'
+import { FAN_ART_API } from '../../../Config';
+
+import Blank from '../../../Images/blank-profile.png'
 
 function TopArtistImage(props) {
 
@@ -31,7 +33,7 @@ function TopArtistImage(props) {
                 </div>
                 :
                 <div>
-                    <img src={props.image} alt="top-artist" className="small-image-grid inset-blue center-text"></img>
+                    <img src={Blank} alt="top-artist" className="small-image-grid"></img>
                     <p>{props.artist.artist.name}</p>
                 </div>
             }
