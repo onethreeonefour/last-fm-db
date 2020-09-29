@@ -56,7 +56,10 @@ function TagPage(props) {
                             }
                         </div>
                     </div>
-                </div> : <div><h1>Loading</h1></div>}
+                </div> : 
+                <div style={{ display: "flex" }}>
+                    <h1 style={{ margin: "auto", marginTop: "45vh" }}>Hey this tag doesn't work! :(</h1>
+                </div>}
 
         </div>
     )
