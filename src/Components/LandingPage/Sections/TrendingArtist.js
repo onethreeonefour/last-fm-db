@@ -16,12 +16,11 @@ function TrendingArtist(props) {
     }, [])
     
     return (
-        <div>
+        <div style={{paddingBottom:"1rem"}}>
             <a href={`/artist/${props.artist.name}`}>
                 <ArtistCard
                     id={BrainzID}
-                    artist={props.artist}
-                  
+                    artist={props.artist}     
                 />
             </a>
         </div>
