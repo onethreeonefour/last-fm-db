@@ -11,7 +11,10 @@ function ArtistImage(props) {
                 .then(response => response.json())
                 .then(response => {
                     if (response.hasOwnProperty('artistbackground')) {
-                        let tempStr = response.artistbackground[0].url;
+                        //console.log(response.artistbackground)
+                        let randomNum = response.artistbackground.length-1
+                        let randomPicture = Math.floor(Math.random() * randomNum)
+                        let tempStr = response.artistbackground[randomPicture].url;
                         let newStr = tempStr.substring((15));
                         setImage("https://" + newStr);
                     }

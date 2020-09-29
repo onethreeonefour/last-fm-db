@@ -9,7 +9,11 @@ function AlbumPage(props) {
         fetch(`${API_URL}album.getinfo&api_key=${API_KEY}&artist=${props.match.params.artistName}&album=${props.match.params.albumName}&format=json`)
             .then(response => response.json())
             .then(response => {
-                setAlbum(response.album)
+                console.log(response)
+                if (response.hasOwnProperty("album")) {
+                    setAlbum(response.album)
+                }
+
             })
 
     }, [])
@@ -25,9 +29,9 @@ function AlbumPage(props) {
                         </div>
                         <div style={{ overflow: "hidden" }}>
                             <a href={`/artist/${Album.artist}`}><h1>{Album.artist}</h1></a>
-                            <h3>Release Date - <span>{Album.wiki.published}</span></h3>
+                            <h3>Release Date - <span>{Album.wiki ? Album.wiki.published : "Not Avaliable"}</span></h3>
                             <h3>Summary</h3>
-                            <p>{Album.wiki.summary}</p>
+                            <p>{Album.wiki ? Album.wiki.summary : "No summary avaliable - Last FM has not provided one"}</p>
                             <h4>Listeners - <span>{Album.listeners}</span></h4>
                             <h4>Playcount - <span>{Album.playcount}</span></h4>
                             <h4>Popular Tags</h4>
@@ -49,7 +53,7 @@ function AlbumPage(props) {
                 </div>
                 :
                 <div style={{ display: "flex" }}>
-                    <h1 style={{ margin: "auto", marginTop: "45vh" }}>Loading...</h1>
+                    <h1 style={{ margin: "auto", marginTop: "45vh" }}>Album Not Found :^(</h1>
                 </div>
             }
         </div>

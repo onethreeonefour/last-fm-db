@@ -27,7 +27,7 @@ function TagPage(props) {
                 setArtist(response.topartists.artist)
             })
     }, [])
-    console.log(Artist)
+    //console.log(Artist)
 
 
     return (
@@ -46,7 +46,7 @@ function TagPage(props) {
                         <h2 style={{ textAlign: 'center' }}>Most Popular</h2>
                         <div className="row-three">
                             {Artist && Artist.map((artist, index) => (
-                                <a href={`/artist/${artist.name}`}>
+                                <a href={`/artist/${artist.name}`} key={index}>
                                     <TopArtist
                                         key={index}
                                         artist={artist}

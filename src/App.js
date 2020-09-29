@@ -6,6 +6,7 @@ import TagPage from './Components/Tag/TagPage';
 import Footer from './Components/Footer/Footer';
 import ArtistPage from './Components/Artist/ArtistPage'
 import AlbumPage from './Components/Album/AlbumPage'
+import SearchPage from './Components/Search/SearchPage'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route exact path="/tag/:tagId" component={TagPage} />
           <Route exact path="/artist/:artistName" component={ArtistPage} />
           <Route exact path="/artist/:artistName/album/:albumName" component={AlbumPage} />
+          <Route exact path="/search/:query" component={SearchPage} />
         </Switch>
       </div>
       <Footer />

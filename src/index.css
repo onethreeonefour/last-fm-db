@@ -259,8 +259,8 @@ code {
 }
 
 .artist-image-bio {
+  max-width: 100%;
   height: auto;
-  width: 750px;
   background-position: center;
   background-size: cover;
   border-radius: 0.5rem;
@@ -274,6 +274,7 @@ code {
 .album-carousel-image {
   border-radius: 0.25rem;
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+  padding: 0.5rem;
 }
 
 .album-image-grid {
@@ -281,12 +282,23 @@ code {
   width: auto;
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+  background-color: rgba(255, 255, 255, 0.041);
+  padding: 1rem;
 }
-.similar-artist-text{
+.similar-artist-text, .search-link{
   color: whitesmoke;
   font-family: 'Raleway', sans-serif;
+  transition: .2s;
+}
+.similar-artist-text:hover{
+  background-color: aliceblue;
+  color:black;
 }
 
+.search-link:hover{
+  background-color: aliceblue;
+  color:black;
+}
 
 @keyframes neon {
   0%, 100% {
@@ -349,9 +361,6 @@ code {
   .row-four {
     grid-template-columns: repeat(2, 1fr);
   }
-  .artist-image-bio {
-    width: 500px;
-  }
   .album-image-grid {
     height: 400px;
   }
@@ -361,9 +370,7 @@ code {
   .row-four {
     grid-template-columns: repeat(1, 1fr);
   }
-  .artist-image-bio {
-    width: 450px;
-  }
+ 
   .neon{
     font-size: 6rem;
   }
@@ -378,8 +385,8 @@ code {
     width: 250px;
   }
   .small-image-grid {
-    height: 125px;
-    width: 125px;
+    height: 150px;
+    width: 150px;
   }
   .tag-container {
     font-size: 1rem;
@@ -387,10 +394,17 @@ code {
   .row-three {
     grid-template-columns: repeat(2, 1fr);
   }
-  .artist-image-bio {
-    width: 330px;
-  }
   .album-image-grid {
     height: 300px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .big-image-grid {
+    height: 225px;
+    width: 225px;
+  }
+  .small-image-grid {
+    height: 125px;
+    width: 125px;
   }
 }

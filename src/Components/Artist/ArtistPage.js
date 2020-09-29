@@ -14,23 +14,24 @@ function ArtistPage(props) {
         fetch(`${API_URL}artist.getInfo&artist=${props.match.params.artistName}&api_key=${API_KEY}&format=json&limit=10`)
             .then(response => response.json())
             .then(response => {
-                //console.log(response)
-                let tempArr = [];
-                let newArr = [];
-                tempArr.push(response.artist.bio.summary)
-                let end = tempArr[0].indexOf("<a ");
-                newArr = tempArr[0].slice(0, end);
-                setArtistInfo(response)
-                setArtistBio(newArr)
+                if(response.hasOwnProperty("artist")){
+                    let tempArr = [];
+                    let newArr = [];
+                    tempArr.push(response.artist.bio.summary)
+                    let end = tempArr[0].indexOf("<a ");
+                    newArr = tempArr[0].slice(0, end);
+                    setArtistInfo(response)
+                    setArtistBio(newArr)
+                }
+           
             })
     }, [])
-    console.log(ArtistInfo)
 
     return (
         <div>
             {ArtistInfo ?
                 <div>
-                    <div className="row-two" style={{ marginTop: "2.5rem", padding: "1rem", backgroundColor: "#363732" }}>
+                    <div className="row-two" style={{ marginTop: "2.5rem", padding: "1rem", backgroundColor: "#363732", gap:"1rem" }}>
                         <div>
                             <ArtistImageContainer
                                 mbid={ArtistInfo.artist.mbid}
@@ -49,9 +50,9 @@ function ArtistPage(props) {
                                     key={index}
                                 />
                             ))}
-                            <h4>Similar Artists</h4>
+                            <h3 style={{textAlign:'center'}}>Similar Artists</h3>
                             {ArtistInfo && ArtistInfo.artist.similar.artist.map((artist, index) => (
-                                <a href={`/artist/${artist.name}`} key={index} style={{display:"block"}} className="similar-artist-text">{artist.name} </a>
+                                <a href={`/artist/${artist.name}`} key={index} style={{display:"block", textAlign:'center'}} className="similar-artist-text">{artist.name} </a>
                             ))}
                         </div>
                     </div>
@@ -60,7 +61,7 @@ function ArtistPage(props) {
                     />
                 </div>
                 : <div style={{ display: "flex" }}>
-                    <h1 style={{ margin: "auto", marginTop: "45vh" }}>Loading...</h1>
+                    <h1 style={{ margin: "auto", marginTop: "45vh" }}>This artist cannot be found :(</h1>
                 </div>}
         </div>
     )

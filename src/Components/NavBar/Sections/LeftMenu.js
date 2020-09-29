@@ -4,7 +4,9 @@ import React from 'react';
 function LeftMenu(props) {
 
   return (
-    <div></div>
+    <div>
+      
+    </div>
   )
 }
 

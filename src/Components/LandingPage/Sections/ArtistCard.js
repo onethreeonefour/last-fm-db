@@ -30,12 +30,14 @@ function ArtistCard(props) {
 
     useEffect(() => {
         if (props.id.length > 0) {
-
             fetch(`https://webservice.fanart.tv/v3/music/${props.id}?api_key=${FAN_ART_API}`)
                 .then(response => response.json())
                 .then(response => {
                     if (response.hasOwnProperty('artistthumb')) {
-                        let tempStr = response.artistthumb[0].url;
+
+                        let randomNum = response.artistthumb.length-1;
+                        let randomPicture = Math.floor(Math.random() * randomNum)
+                        let tempStr = response.artistthumb[randomPicture].url;
                         let newStr = tempStr.substring((15));
                         setImage("https://"+newStr);
                     }

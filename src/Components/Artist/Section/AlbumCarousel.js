@@ -37,6 +37,7 @@ function AlbumCarousel(props) {
             <Carousel
                 responsive={responsive}
                 centerMode={true}
+                
             >
                 {renderCards}
             </Carousel>

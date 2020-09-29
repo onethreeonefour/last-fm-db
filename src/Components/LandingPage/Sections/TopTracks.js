@@ -38,7 +38,6 @@ function TopTracks(props) {
 
     }, [props])
     const classes = useStyles();
-    //console.log(props.track.artist.name)
 
     return (
         <a href={`/artist/${props.track.artist.name}`}>
