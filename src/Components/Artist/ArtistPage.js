@@ -51,7 +51,7 @@ function ArtistPage(props) {
                             ))}
                             <h4>Similar Artists</h4>
                             {ArtistInfo && ArtistInfo.artist.similar.artist.map((artist, index) => (
-                                <a href={`/artist/${artist.name}`} key={index} style={{display:"block"}}>{artist.name} </a>
+                                <a href={`/artist/${artist.name}`} key={index} style={{display:"block"}} className="similar-artist-text">{artist.name} </a>
                             ))}
                         </div>
                     </div>

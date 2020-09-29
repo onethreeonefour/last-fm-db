@@ -8,7 +8,7 @@ a {
   color: whitesmoke;
 }
 
-h1, h2, h3, h4, p, a {
+h1, h2, h3, h4, p{
   color: whitesmoke;
   font-family: 'Raleway', sans-serif;
 }
@@ -46,16 +46,14 @@ code {
 .neon {
   font-family: neon;
   color: #FB4264;
-  font-size: 9vw;
-  line-height: 9vw;
+  font-size: 8rem;
   text-shadow: 0 0 3vw #F40A35;
 }
 
 .flux {
   font-family: neon;
   color: #426DFB;
-  font-size: 9vw;
-  line-height: 9vw;
+  font-size: 8rem;
   text-shadow: 0 0 3vw #2356FF;
 }
 
@@ -284,6 +282,10 @@ code {
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
 }
+.similar-artist-text{
+  color: whitesmoke;
+  font-family: 'Raleway', sans-serif;
+}
 
 
 @keyframes neon {
@@ -361,6 +363,12 @@ code {
   }
   .artist-image-bio {
     width: 450px;
+  }
+  .neon{
+    font-size: 6rem;
+  }
+  .flux{
+    font-size: 6rem;
   }
 }
 
