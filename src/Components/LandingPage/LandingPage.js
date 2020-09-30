@@ -20,7 +20,6 @@ function LandingPage() {
         fetch(path)
             .then(response => response.json())
             .then(response => {
-                //console.log(response)
                 setArtist(response.artists)
             })
     }

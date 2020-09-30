@@ -9,7 +9,6 @@ function AlbumPage(props) {
         fetch(`${API_URL}album.getinfo&api_key=${API_KEY}&artist=${props.match.params.artistName}&album=${props.match.params.albumName}&format=json`)
             .then(response => response.json())
             .then(response => {
-                console.log(response)
                 if (response.hasOwnProperty("album")) {
                     setAlbum(response.album)
                 }

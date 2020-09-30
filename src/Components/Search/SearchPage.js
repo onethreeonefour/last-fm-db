@@ -4,12 +4,10 @@ import { API_KEY, API_URL, } from '../../Config'
 function SearchPage(props) {
 
     const [SearchResults, setSearchResults] = useState([])
-    console.log(props)
     useEffect(() => {
         fetch(`${API_URL}artist.search&artist=${props.match.params.query}&api_key=${API_KEY}&format=json&limit=25`)
             .then(response => response.json())
             .then(response => {
-                console.log(response.results.artistmatches.artist)
                 setSearchResults(response.results.artistmatches.artist)
             })
 

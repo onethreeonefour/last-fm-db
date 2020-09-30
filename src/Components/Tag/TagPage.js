@@ -27,8 +27,6 @@ function TagPage(props) {
                 setArtist(response.topartists.artist)
             })
     }, [])
-    //console.log(Artist)
-
 
     return (
         <div className="container" style={{ width: '85%', paddingTop: "3rem" }}>

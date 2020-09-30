@@ -10,7 +10,6 @@ function TrendingArtist(props) {
         fetch(`${BRAINZ_URL}${props.artist.name}&fmt=json`)
             .then(response => response.json())
             .then(response => {
-                //console.log(response.artists[0].id)
                 setBrainzID(response.artists[0].id)
             })
     }, [])

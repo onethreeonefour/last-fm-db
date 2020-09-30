@@ -10,7 +10,6 @@ function ArtistAlbumImage(props) {
         fetch(`${API_URL}artist.gettopalbums&artist=${props.artist.artist.name}&api_key=${API_KEY}&format=json&limit=20`)
             .then(response => response.json())
             .then(response => {
-                //console.log(response)
                 setImage(response.topalbums.album)
             })
 

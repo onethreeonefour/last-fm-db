@@ -11,7 +11,6 @@ function SimilarTags(props) {
             fetch(`${API_URL}artist.getinfo&artist=${props.artist[0].name}&api_key=${API_KEY}&format=json&limit=6`)
                 .then(response => response.json())
                 .then(response => {
-                    //console.log(response.artist.tags.tag)
                     setTag(response.artist.tags.tag)
                 })
 
