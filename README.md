@@ -36,3 +36,4 @@ LastFM no longer provides artist photos so I had to use it's MusicBrainz id prov
 Due to using fanart-tv free api to fetch images it's rather slow but the image quality is extremely good.
 
 
+Demo - https://music-db.netlify.app/
