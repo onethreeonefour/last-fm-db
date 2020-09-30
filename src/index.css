@@ -290,12 +290,7 @@ code {
   font-family: 'Raleway', sans-serif;
   transition: .2s;
 }
-.similar-artist-text:hover{
-  background-color: aliceblue;
-  color:black;
-}
-
-.search-link:hover{
+.similar-artist-text:hover, .search-link:hover{
   background-color: aliceblue;
   color:black;
 }

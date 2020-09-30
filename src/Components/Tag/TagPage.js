@@ -56,9 +56,13 @@ function TagPage(props) {
                             }
                         </div>
                     </div>
-                </div> : 
-                <div style={{ display: "flex" }}>
-                    <h1 style={{ margin: "auto", marginTop: "45vh" }}>Hey this tag doesn't work! :(</h1>
+                </div> :
+                <div style={{ display: "flex", margin: "auto", marginTop: "35vh", justifyContent: "center" }}>
+                    <div style={{ textAlign: "center" }}>
+                        <h1>This tag cannot be found! :^(</h1>
+                        <br />
+                        <a href={`/`} className="search-link" style={{ padding: "1rem", borderTop: "2px", borderStyle: "solid", borderColor: "gray" }}>Go Back To Whence You Came</a>
+                    </div>
                 </div>}
 
         </div>

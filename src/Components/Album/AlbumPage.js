@@ -52,8 +52,12 @@ function AlbumPage(props) {
                     </div>
                 </div>
                 :
-                <div style={{ display: "flex" }}>
-                    <h1 style={{ margin: "auto", marginTop: "45vh" }}>Album Not Found :^(</h1>
+                <div style={{ display: "flex", margin: "auto", marginTop: "45vh", justifyContent: "center" }}>
+                    <div style={{ textAlign: "center" }}>
+                        <h1>This album cannot be found :(</h1>
+                        <br />
+                        <a href={`/`} className="search-link" style={{ padding: "1rem", borderTop: "2px", borderStyle: "solid", borderColor: "gray" }}>Go Back To Whence You Came</a>
+                    </div>
                 </div>
             }
         </div>
