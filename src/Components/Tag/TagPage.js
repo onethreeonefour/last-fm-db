@@ -31,7 +31,7 @@ function TagPage(props) {
     return (
         <div className="container tag-page-container">
             {Content ?
-                <div className="row-two" style={{ gap: '1rem' }}>
+                <div className="row-two" style={{ gap: '1rem' }} >
                     <div>
                         <h1>{props.match.params.tagId}</h1>
                         <h4>Summary</h4>

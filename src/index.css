@@ -265,9 +265,10 @@ code {
   background-size: cover;
   border-radius: 3px;
 }
-.artist-info{
+
+.artist-info {
   margin: 10% 0 0 5%;
-  width:55%;
+  width: 55%;
 }
 
 .blank-artist-image {
@@ -279,7 +280,7 @@ code {
   border-radius: 0.25rem;
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
   padding: 0.5rem;
-  height:auto;
+  height: auto;
   max-width: 100%;
 }
 
@@ -316,27 +317,31 @@ code {
   font-size: 3rem;
 }
 
-.tag-page-container{
-  width:85%;
+.tag-page-container {
+  width: 85%;
   justify-content: center;
   align-items: center;
   margin-top: 4%;
 }
-.tag-page-image{
-  height:auto;
+
+.tag-page-image {
+  height: auto;
   max-width: 100%;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.192);
   border-radius: 2px;
 }
 
+.album-info{
+  background-color: #363732;
+}
 
 @keyframes neon {
   0%, 100% {
-    text-shadow: 0 0 1vw turquoise, 0 0 3vw rgba(64, 224, 208, 0.8), 0 0 10vw  rgba(64, 224, 208, 0.7), 0 0 10vw  rgba(64, 224, 208, 0.5), 0 0 .4vw rgba(64, 224, 208, 0.3), .5vw .5vw .1vw  rgba(64, 224, 208, 0.2);
+    text-shadow: 0 0 1vw turquoise, 0 0 3vw rgba(64, 224, 208, 0.8), 0 0 10vw rgba(64, 224, 208, 0.7), 0 0 10vw rgba(64, 224, 208, 0.5), 0 0 .4vw rgba(64, 224, 208, 0.3), .5vw .5vw .1vw rgba(64, 224, 208, 0.2);
     color: turquoise;
   }
   50% {
-    text-shadow: 0 0 .5vw turquoise, 0 0 1.5vw rgba(64, 224, 208, 0.8), 0 0 5vw  rgba(64, 224, 208, 0.7), 0 0 5vw  rgba(64, 224, 208, 0.6), 0 0 .2vw  rgba(64, 224, 208, 0.7), .5vw .5vw .1vw  rgba(64, 224, 208, 0.8);
+    text-shadow: 0 0 .5vw turquoise, 0 0 1.5vw rgba(64, 224, 208, 0.8), 0 0 5vw rgba(64, 224, 208, 0.7), 0 0 5vw rgba(64, 224, 208, 0.6), 0 0 .2vw rgba(64, 224, 208, 0.7), .5vw .5vw .1vw rgba(64, 224, 208, 0.8);
     color: turquoise;
   }
 }
@@ -355,16 +360,37 @@ code {
 @media only screen and (max-width: 3840px) {
   .discover-tag-container {
     width: 47.5%;
-    margin:auto;
+    margin: auto;
   }
-  .tag-page-container{
-    width:75%;
-    height:60vh;
+  
+  .tag-page-container {
+    width: 65%;
+    height: 65vh;
+    transform: scale(1.25);
   }
   .album-carousel-image {
-    height:500px;
-    width:auto;
+    height: 500px;
+    width: auto;
   }
+  .artist-info {
+    margin: auto;
+    width: 65%;
+    transform: scale(1.5);
+  }
+  .album-info{
+    margin:auto;
+    padding:3rem 2rem 2rem 2rem;
+    border-radius: 5px;
+  }
+  .album-info-container{
+    width:65%;
+    margin:auto;
+    margin-top:7.5%;
+  }
+  .album-image-grid {
+    height: 800px;
+  }
+  
 }
 
 @media only screen and (max-width: 2560px) {
@@ -372,32 +398,50 @@ code {
     width: 65%;
   }
   .album-carousel-image {
-    height:475px;
-    width:auto;
+    height: 475px;
+    width: auto;
   }
-  .artist-info{
-    margin: 10% 0 0 5%;
-    width:65%;
+  .artist-info {
+    margin: auto;
+    width: 70%;
+    transform: scale(1);
+  }
+  .album-info-container{
+    width:75%;
+    margin:auto;
+    margin-top:3%;
+  }
+  .album-image-grid {
+    height: 600px;
   }
 }
-
 
 @media only screen and (max-width: 1920px) {
   .discover-tag-container {
     width: 85%;
   }
-  .tag-page-container{
-    width:85%;
-    height:auto;
+  .tag-page-container {
+    width: 85%;
+    height: auto;
     margin-top: 2.75%;
+    transform: scale(1);
   }
   .album-carousel-image {
-    height:375px;
-    width:auto;
+    height: 375px;
+    width: auto;
   }
-  .artist-info{
-    width:85%;
+  .artist-info {
+    width: 85%;
+    margin: auto;
+    transform: scale(1);
+  }
+  .album-info-container{
+    width:100%;
     margin:auto;
+    margin-top:2.5%;
+  }
+  .album-image-grid {
+    height: 500px;
   }
 }
 
@@ -413,8 +457,8 @@ code {
     grid-template-columns: repeat(1, 1fr);
   }
   .album-carousel-image {
-    height:auto;
-    width:auto;
+    height: auto;
+    width: auto;
   }
 }
 

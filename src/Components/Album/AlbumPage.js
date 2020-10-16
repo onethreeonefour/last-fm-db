@@ -20,11 +20,11 @@ function AlbumPage(props) {
     return (
         <div>
             {Album.hasOwnProperty("artist") ?
-                <div>
-                    <div className="row-two" style={{ marginTop: "2.1rem", padding: "1rem", backgroundColor: "#363732" }}>
+                <div className="album-info-container">
+                    <div className="row-two album-info" style={{ boxShadow: "1px 2px 20px rgba(0, 0, 0, 0.3)" }}>
                         <div style={{ margin: "auto" }}>
                             <img src={Album.image[3]["#text"]} alt="album-art" className="album-image-grid" ></img>
-                            <h3 style={{ textAlign: "center" }}>{Album.name}</h3>
+                            <h2 style={{ textAlign: "center" }}>{Album.name}</h2>
                         </div>
                         <div style={{ overflow: "hidden" }}>
                             <a href={`/artist/${Album.artist}`}><h1>{Album.artist}</h1></a>
@@ -40,11 +40,11 @@ function AlbumPage(props) {
                                     key={index}
                                 />
                             ))}
-
                         </div>
                     </div >
-                    <div className="row-two">
-                        <h4 className="center-text">Track Listing</h4>
+                    <br />
+                    <h2 className="center-text" style={{padding:"2rem"}}>Track Listing</h2>
+                    <div className="row-two album-info">
                         {Album && Album.tracks.track.map((track, index) => (
                             <p key={index} className="center-text track-list" >{track.name}</p>
                         ))}
