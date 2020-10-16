@@ -9,7 +9,7 @@ function Footer() {
             backgroundColor: '#0A0A0A'
         }}>
            <p> By Terry Nguyen </p>
-           <a href="lightontheland.net" rel="noopener">lightontheland.net</a>
+           <a href="http://lightontheland.net/" style={{color:'white'}} target="_blank" rel="noopener">lightontheland.net</a>
         </div>
     )
 }
