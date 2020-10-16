@@ -29,7 +29,7 @@ function TopArtistImage(props) {
         <div>
             {Image.length > 0 ?
                 <div>
-                    <img src={Image} alt="top-artist" className="small-image-grid inset-blue center-text"></img>
+                    <img src={Image} alt="top-artist" className="tag-page-image inset-blue center-text"></img>
                     <p>{props.artist.artist.name}</p>
                 </div>
                 :

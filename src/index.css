@@ -8,7 +8,7 @@ a {
   color: whitesmoke;
 }
 
-h1, h2, h3, h4, p{
+h1, h2, h3, h4, p {
   color: whitesmoke;
   font-family: 'Raleway', sans-serif;
 }
@@ -263,7 +263,11 @@ code {
   height: auto;
   background-position: center;
   background-size: cover;
-  border-radius: 0.5rem;
+  border-radius: 3px;
+}
+.artist-info{
+  margin: 10% 0 0 5%;
+  width:55%;
 }
 
 .blank-artist-image {
@@ -275,6 +279,15 @@ code {
   border-radius: 0.25rem;
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
   padding: 0.5rem;
+  height:auto;
+  max-width: 100%;
+}
+
+.carousel {
+  background-color: #2e2e2e50;
+  text-align: center;
+  border-radius: 2px;
+  padding-top: 2rem;
 }
 
 .album-image-grid {
@@ -285,15 +298,37 @@ code {
   background-color: rgba(255, 255, 255, 0.041);
   padding: 1rem;
 }
-.similar-artist-text, .search-link{
+
+.similar-artist-text, .search-link {
   color: whitesmoke;
   font-family: 'Raleway', sans-serif;
   transition: .2s;
 }
-.similar-artist-text:hover, .search-link:hover{
+
+.similar-artist-text:hover, .search-link:hover {
   background-color: aliceblue;
-  color:black;
+  color: black;
 }
+
+.heading {
+  padding: 3rem 0 3rem 0;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.tag-page-container{
+  width:85%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4%;
+}
+.tag-page-image{
+  height:auto;
+  max-width: 100%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.192);
+  border-radius: 2px;
+}
+
 
 @keyframes neon {
   0%, 100% {
@@ -317,6 +352,55 @@ code {
   }
 }
 
+@media only screen and (max-width: 3840px) {
+  .discover-tag-container {
+    width: 47.5%;
+    margin:auto;
+  }
+  .tag-page-container{
+    width:75%;
+    height:60vh;
+  }
+  .album-carousel-image {
+    height:500px;
+    width:auto;
+  }
+}
+
+@media only screen and (max-width: 2560px) {
+  .discover-tag-container {
+    width: 65%;
+  }
+  .album-carousel-image {
+    height:475px;
+    width:auto;
+  }
+  .artist-info{
+    margin: 10% 0 0 5%;
+    width:65%;
+  }
+}
+
+
+@media only screen and (max-width: 1920px) {
+  .discover-tag-container {
+    width: 85%;
+  }
+  .tag-page-container{
+    width:85%;
+    height:auto;
+    margin-top: 2.75%;
+  }
+  .album-carousel-image {
+    height:375px;
+    width:auto;
+  }
+  .artist-info{
+    width:85%;
+    margin:auto;
+  }
+}
+
 @media only screen and (max-width: 1600px) {
   .big-image-grid {
     margin-bottom: 1rem;
@@ -327,6 +411,10 @@ code {
   }
   .row-two {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .album-carousel-image {
+    height:auto;
+    width:auto;
   }
 }
 
@@ -365,12 +453,14 @@ code {
   .row-four {
     grid-template-columns: repeat(1, 1fr);
   }
- 
-  .neon{
+  .neon {
     font-size: 6rem;
   }
-  .flux{
+  .flux {
     font-size: 6rem;
+  }
+  .heading {
+    font-size: 2.5rem;
   }
 }
 
@@ -393,6 +483,7 @@ code {
     height: 300px;
   }
 }
+
 @media only screen and (max-width: 320px) {
   .big-image-grid {
     height: 225px;

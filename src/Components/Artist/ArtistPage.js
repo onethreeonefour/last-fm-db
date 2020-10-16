@@ -31,14 +31,14 @@ function ArtistPage(props) {
         <div>
             {ArtistInfo ?
                 <div>
-                    <div className="row-two" style={{ marginTop: "2.5rem", padding: "1rem", backgroundColor: "#363732", gap: "1rem" }}>
+                    <div className="row-two" style={{ marginTop: "2.5rem", padding: "1.1rem", backgroundColor: "#363732", gap: "1rem" }}>
                         <div>
                             <ArtistImageContainer
                                 mbid={ArtistInfo.artist.mbid}
                                 name={ArtistInfo.artist.name}
                             />
                         </div>
-                        <div style={{ overflow: "hidden" }}>
+                        <div style={{ overflow: "hidden" }} class="artist-info">
                             <a href={`/artist/${ArtistInfo.artist.name}`}><h1>{ArtistInfo.artist.name}</h1></a>
                             <p>{ArtistBio}</p>
                             <h4>Listeners - <span>{ArtistInfo.artist.stats.listeners}</span></h4>

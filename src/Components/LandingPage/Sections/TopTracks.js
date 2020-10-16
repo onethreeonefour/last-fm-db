@@ -9,12 +9,14 @@ import { API_KEY, API_URL } from '../../../Config';
 
 const useStyles = makeStyles({
     root: {
-        maxWidth: 345,
+        maxWidth: 800,
         backgroundColor: "#444444",
-        boxShadow: "0 4px 6px 0 hsla(0, 0%, 0%, 0.2)"
+        boxShadow: "0 4px 6px 0 hsla(0, 0%, 0%, 0.2)",
+        maxHeight: 1200
     },
     media: {
         height: 400,
+        maxHeight: 1200,
     },
 
 });

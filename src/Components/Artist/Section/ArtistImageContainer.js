@@ -18,7 +18,7 @@ function ArtistImageContainer(props) {
     }, [])
 
     return (
-        <div style={{ marginTop: "1rem" }}>
+        <div>
             <ArtistImage
                 id={BrainzID}
             />

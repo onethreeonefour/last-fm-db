@@ -99,6 +99,7 @@
   padding-top: 1.5rem;
   background: transparent;
   width: 90%;
+  margin-right: 0.5rem;
 }
 
 @media only screen and (max-width: 375px) {

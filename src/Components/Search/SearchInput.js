@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { withRouter } from 'react-router-dom';
 
 function SearchInput(props) {
-    //console.log(props)
 
     const [Query, setQuery] = useState("")
 
@@ -25,6 +24,7 @@ function SearchInput(props) {
                     placeholder="Search Artist"
                     required
                     onChange={onChangeSearch}
+                    style={{textAlign:'right'}}
                 />
             </form>
         </div>

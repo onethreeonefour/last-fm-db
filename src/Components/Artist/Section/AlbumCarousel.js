@@ -40,7 +40,7 @@ function AlbumCarousel(props) {
             <Carousel
                 responsive={responsive}
                 centerMode={true}
-
+                className="carousel"
             >
                 {renderCards}
             </Carousel>

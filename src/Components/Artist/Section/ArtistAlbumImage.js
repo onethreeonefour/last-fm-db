@@ -17,7 +17,7 @@ function ArtistAlbumImage(props) {
 
     return (
         <div style={{ width: '85%', margin: "auto" }}>
-            <h1>Top Rated Albums</h1>
+            <h1 style={{padding:"1.5rem 0 1.5rem 0"}}>Top Rated Albums</h1>
             <AlbumCarousel
                 albumImage={Image}
                 name={props.artist.artist.name}

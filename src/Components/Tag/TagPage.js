@@ -29,7 +29,7 @@ function TagPage(props) {
     }, [])
 
     return (
-        <div className="container" style={{ width: '85%', paddingTop: "3rem" }}>
+        <div className="container tag-page-container">
             {Content ?
                 <div className="row-two" style={{ gap: '1rem' }}>
                     <div>

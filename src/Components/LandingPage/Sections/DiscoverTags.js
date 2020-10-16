@@ -4,7 +4,7 @@ function DiscoverTags() {
     return (
         <div>
             <h1>Discover Music - From Past to Now</h1>
-            <div className="row-two tag-container" >
+            <div className="row-two tag-container discover-tag-container" >
                 <a href="/tag/alternative" target="_blank" className="alt big-image-grid align-center inset-red center-text">Alternative</a>
                 <div className="row-three">
                     <a href="/tag/blues" target="_blank" className="blues small-image-grid inset-blue center-text">Blues</a>

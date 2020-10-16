@@ -37,7 +37,7 @@ function LandingPage() {
             <SplashHeader />     
             {/*Top Tracks*/}
             <div className="container">
-                <h1>Top Tracks</h1>
+                <h1 className="heading">Top Tracks</h1>
             </div>
             <div className="row-four" style={{ width: '85%' }} >
                 {Track.track && Track.track.map((track, index) => (
@@ -52,9 +52,9 @@ function LandingPage() {
 
             {/*Trending Artist*/}
             <div className="container">
-                <h1>Trending Artists</h1>
+                <h1 className="heading">Trending Artists</h1>
             </div>
-            <div className="row-four" style={{ width: '85%' }}>
+            <div className="row-four" style={{ width: '85%', paddingBottom:"4rem", margin:'auto' }}>
                 {Artist.artist && Artist.artist.map((artist, index) => (
                     <TrendingArtist
                         key={index}
