@@ -45,16 +45,16 @@ code {
 
 .neon {
   font-family: neon;
-  color: #FB4264;
+  color: turquoise;
   font-size: 8rem;
-  text-shadow: 0 0 3vw #F40A35;
+  text-shadow: 0 0 3vw turquoise;
 }
 
 .flux {
   font-family: neon;
-  color: #426DFB;
+  color: hotpink;
   font-size: 8rem;
-  text-shadow: 0 0 3vw #2356FF;
+  text-shadow: 0 0 3vw hotpink;
 }
 
 .neon {
@@ -332,23 +332,23 @@ code {
 
 @keyframes neon {
   0%, 100% {
-    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
-    color: #FED128;
+    text-shadow: 0 0 1vw turquoise, 0 0 3vw rgba(64, 224, 208, 0.8), 0 0 10vw  rgba(64, 224, 208, 0.7), 0 0 10vw  rgba(64, 224, 208, 0.5), 0 0 .4vw rgba(64, 224, 208, 0.3), .5vw .5vw .1vw  rgba(64, 224, 208, 0.2);
+    color: turquoise;
   }
   50% {
-    text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
-    color: #806914;
+    text-shadow: 0 0 .5vw turquoise, 0 0 1.5vw rgba(64, 224, 208, 0.8), 0 0 5vw  rgba(64, 224, 208, 0.7), 0 0 5vw  rgba(64, 224, 208, 0.6), 0 0 .2vw  rgba(64, 224, 208, 0.7), .5vw .5vw .1vw  rgba(64, 224, 208, 0.8);
+    color: turquoise;
   }
 }
 
 @keyframes flux {
   0%, 100% {
-    text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
-    color: #28D7FE;
+    text-shadow: 0 0 1vw hotpink, 0 0 3vw rgba(255, 105, 180, 0.8), 0 0 10vw rgba(255, 105, 180, 0.7), 0 0 10vw rgba(255, 105, 180, 0.5), 0 0 .4vw rgba(255, 105, 180, 0.3), .5vw .5vw .1vw rgba(255, 105, 180, 0.2);
+    color: rgb(255, 105, 180);
   }
   50% {
-    text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
-    color: #146C80;
+    text-shadow: 0 0 .5vw rgba(255, 105, 180, 1), 0 0 1.5vw rgba(255, 105, 180, 0.8), 0 0 5vw rgba(255, 105, 180, 0.7), 0 0 5vw rgba(255, 105, 180, 0.6), 0 0 .2vw rgba(255, 105, 180, 0.7), .5vw .5vw .1vw rgba(255, 105, 180, 0.8);
+    color: rgb(255, 105, 180);
   }
 }
 
